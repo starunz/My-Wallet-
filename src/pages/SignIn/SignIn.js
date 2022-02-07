@@ -1,4 +1,4 @@
-import { Container, Title, Form, Input, Button, Liink } from "../../components/form";
+import { Container, Title, Form, Input, Button, Liink } from "../../components/styleSignIn&SignUp";
 
 const SignIn = () => {
     return (

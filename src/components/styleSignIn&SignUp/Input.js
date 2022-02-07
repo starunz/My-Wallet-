@@ -14,6 +14,8 @@ const Input = styled.input`
 
   font-family: 'Raleway', sans-serif;
 
+  pointer-events: ${(props) => (props.disabled ? "none" : "all")};
+
   &::placeholder {
     font-weight: 400;
     color: #000000;
