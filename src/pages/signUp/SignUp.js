@@ -1,9 +1,9 @@
-import { Container, Title, Form, Input, Button, Liink, } from "../../components/styleSignIn&SignUp";
+import { Container, Title, Form, Input, Button, Liink, } from '../../components/styleSignIn&SignUp';
 
-import { useState } from "react";
-import api from "../../services/api";
-import { useNavigate } from "react-router-dom";
-import { ThreeDots } from "react-loader-spinner";
+import { useState } from 'react';
+import api from '../../services/api';
+import { useNavigate } from 'react-router-dom';
+import { ThreeDots } from 'react-loader-spinner';
 import Swal from 'sweetalert2'
 
 const SignUp = () => {
@@ -82,7 +82,7 @@ const SignUp = () => {
         title: "OOPS...",
         text: 'Ocorreu um erro 🤔, tenta de novo, por favor 🥺',
       });
-      
+
       setSignUpData({
         name: '',
         email: '',
@@ -98,36 +98,36 @@ const SignUp = () => {
 
       <Form onSubmit={handleSignUp}>
         <Input
-          type="text"
-          placeholder="Nome"
-          name="name"
+          type='text'
+          placeholder='Nome'
+          name='name'
           onChange={handleChange}
           value={signUpData.name}
           disabled={isLoading}
           required
         />
         <Input
-          type="email"
-          placeholder="E-mail"
-          name="email"
+          type='email'
+          placeholder='E-mail'
+          name='email'
           onChange={handleChange}
           value={signUpData.email}
           disabled={isLoading}
           required
         />
         <Input
-          type="password"
-          placeholder="Senha"
-          name="password"
+          type='password'
+          placeholder='Senha'
+          name='password'
           onChange={handleChange}
           value={signUpData.password}
           disabled={isLoading}
           required
         />
         <Input
-          type="password"
-          placeholder="Confirme a senha"
-          name="confirmPassword"
+          type='password'
+          placeholder='Confirme a senha'
+          name='confirmPassword'
           onChange={handleChange}
           value={signUpData.confirmPassword}
           disabled={isLoading}
