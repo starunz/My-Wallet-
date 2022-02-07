@@ -36,11 +36,18 @@ const addExit = (body, token) => {
     return promisse;
 }
 
+const transactions = (token) => {
+    const newConfig = config(token)
+    const promisse = axios.get(`${base}/wallet`, newConfig);
+
+    return promisse;
+}
 const api = {
     signUp,
     signIn,
     addEntry,
     addExit,
+    transactions
 }
 
 export default api;

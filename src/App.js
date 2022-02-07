@@ -9,9 +9,9 @@ const App = () => {
                 <Routes>
                     <Route path='/' element={<SignIn />} />
                     <Route path='/sign-up' element={<SignUp />} />
-                    <Route path='wallet' element={<Wallet />} />
-                    <Route path='add-entry' element={<AddEntry />} />
-                    <Route path='add-exit' element={<AddExit />} />
+                    <Route path='/wallet' element={<Wallet />} />
+                    <Route path='/add-entry' element={<AddEntry />} />
+                    <Route path='/add-exit' element={<AddExit />} />
                 </Routes>
             </BrowserRouter>
         </AuthProvider>
