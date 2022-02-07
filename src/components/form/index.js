@@ -1,8 +1,8 @@
 import Container from "./Container";
-import Button from "./Button";
+import Title from "./Title";
 import Form from "./Form";
 import Input from "./Input";
-import Title from "./Title";
+import Button from "./Button";
 import Liink from "./Link";
 
-export { Container, Button, Form, Input, Title, Liink  }
+export { Container, Title, Form, Input, Button, Liink  }
