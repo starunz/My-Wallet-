@@ -34,7 +34,7 @@ const AddEntry = () => {
         .then(() => {
             setIsLoading(false);
 
-            navigate("/wallet");
+            navigate('/wallet');
         })
         .catch((error) => {
             setIsLoading(false);

@@ -29,10 +29,18 @@ const addEntry = (body, token) => {
     return promisse;
 }
 
+const addExit = (body, token) => {
+    const newConfig = config(token)
+    const promisse = axios.post(`${base}/add-exit`, body, newConfig);
+
+    return promisse;
+}
+
 const api = {
     signUp,
     signIn,
-    addEntry
+    addEntry,
+    addExit,
 }
 
 export default api;
