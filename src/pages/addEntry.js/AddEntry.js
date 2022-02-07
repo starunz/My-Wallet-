@@ -23,8 +23,54 @@ const AddEntry = () => {
     setTransactionData({ ...transactionData, [e.target.name]: e.target.value });
     }
     
-    function handleEntry (){
+    function handleEntry (e){
+        e.preventDefault();
 
+        setIsLoading(true);
+        const promise = api.addEntry(
+        { ...transactionData}, auth.token
+        );
+        promise
+        .then(() => {
+            setIsLoading(false);
+
+            navigate("/wallet");
+        })
+        .catch((error) => {
+            setIsLoading(false);
+
+            if (error.response.status === 422) {
+                setTransactionData({
+                    value: '',
+                    description: '',
+                });
+
+                Swal.fire({
+                    icon: "error",
+                    title: "OOPS...",
+                    text: 'Insira os dados corretamente, por favor 😉',
+                });
+
+                return;
+            }
+
+            if (error.response.status === 401) {
+                setTransactionData({
+                    value: '',
+                    description: '',
+                });
+                navigate("/");
+        
+                Swal.fire({
+                    icon: "error",
+                    title: "OOPS...",
+                    text: 'Ocorreu um erro 🥺, faça login novamente 😉 ',
+                });
+
+                return;
+            }
+
+        });
     }
 
     return (
