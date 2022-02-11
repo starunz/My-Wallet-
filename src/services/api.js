@@ -11,7 +11,7 @@ const config = (token) => {
 }
 
 const signUp = (body) => {
-    const promisse = axios.post(`${base}/sigin-up`, body)
+    const promisse = axios.post(`${base}/sign-up`, body)
 
     return promisse;
 }
