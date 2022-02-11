@@ -4,7 +4,8 @@ import { useNavigate } from "react-router-dom";
 import { Form, Input, Button } from "../../components/styleSignIn&SignUp";
 import { Container, Title } from "../../components/styleEntry&Exit/style";
 
-import api from "../../services/api";
+//import api from "../../services/api";
+import * as api from '../../services/api'
 import useAuth from '../../hooks/useAuth';
 
 import { ThreeDots } from 'react-loader-spinner';

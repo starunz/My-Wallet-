@@ -2,7 +2,8 @@ import { Container, Title, Form, Input, Button, Liink } from '../../components/s
 
 import { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
-import api from '../../services/api';
+//import api from '../../services/api';
+import * as api from '../../services/api'
 import { ThreeDots } from 'react-loader-spinner';
 import Swal from 'sweetalert2'
 import useAuth from '../../hooks/useAuth';

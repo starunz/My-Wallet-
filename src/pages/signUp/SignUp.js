@@ -1,7 +1,8 @@
-import { Container, Title, Form, Input, Button, Liink, } from '../../components/styleSignIn&SignUp';
+import { Container, Title, Form, Input, Button, Liink, ContainerForm} from '../../components/styleSignIn&SignUp';
 
 import { useState } from 'react';
-import api from '../../services/api';
+//import api from '../../services/api';
+import * as api from '../../services/api'
 import { useNavigate } from 'react-router-dom';
 import { ThreeDots } from 'react-loader-spinner';
 import Swal from 'sweetalert2'
@@ -144,6 +145,7 @@ const SignUp = () => {
       </Form>
 
       <Liink to='/'>Já tem uma conta? Entre agora!</Liink>
+
     </Container>
   );
 }

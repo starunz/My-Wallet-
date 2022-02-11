@@ -1,6 +1,6 @@
 import axios from "axios";
 
-const base = 'http://localhost:5000';
+const base = 'https://mywallet-bs.herokuapp.com';
 
 const config = (token) => {
     return {
@@ -11,7 +11,7 @@ const config = (token) => {
 }
 
 const signUp = (body) => {
-    const promisse = axios.post(`${base}/sign-up`, body)
+    const promisse = axios.post(`${base}/sigin-up`, body)
 
     return promisse;
 }
@@ -42,12 +42,11 @@ const transactions = (token) => {
 
     return promisse;
 }
-const api = {
+
+export {
     signUp,
     signIn,
     addEntry,
     addExit,
     transactions
 }
-
-export default api;
